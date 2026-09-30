@@ -11,7 +11,7 @@ Skills (in `.opencode/skills/`, each self-contained with scripts):
 - `manim-physics-scenes` - Manim scene rules, cue-sync helper, template
 - `manim-composer` - plan vague idea into scene-by-scene `scenes.md` before coding
 - `manimce-best-practices` - Manim Community Edition rules (`from manim import *`, `manim` CLI)
-- `video-deck` - convert a finished video into a PowerPoint that plays it frame-by-frame as an animation
+- `video-deck` - present lessons with Manim Slides (scene `Slide` + `next_slide()`, click back/forth live animation) + optional pptx frame decks
 
 Global rules:
 - Accuracy over polish. If unsure about physics, ask the teacher.

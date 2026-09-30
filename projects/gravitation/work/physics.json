@@ -1,0 +1,50 @@
+{
+  "note": "Every number and equation used in scenes lives here. Scenes assert sanity_check.",
+  "constants": {
+    "G": 6.67e-11,
+    "G_note": "3 s.f. textbook value; with CODATA 6.674e-11 the result would be 9.82, not the required 9.81",
+    "g_surface_mps2": 9.81,
+    "M_earth_kg": 5.972e24,
+    "R_earth_m": 6.371e6
+  },
+  "scene1": {
+    "label_m1": "m_1",
+    "label_m2": "m_2",
+    "symbolic": true
+  },
+  "scene2": {
+    "mass_cases": [
+      { "name": "baseline", "m1_factor": 1, "m2_factor": 1, "F_factor": 1 },
+      { "name": "double m1", "m1_factor": 2, "m2_factor": 1, "F_factor": 2 },
+      { "name": "triple m2", "m1_factor": 1, "m2_factor": 3, "F_factor": 3 },
+      { "name": "double m1 and triple m2", "m1_factor": 2, "m2_factor": 3, "F_factor": 6 }
+    ],
+    "distance_cases": [
+      { "r_factor": 1, "r_label": "r",  "F_label": "F",     "F_factor": 1.0 },
+      { "r_factor": 2, "r_label": "2r", "F_label": "F/4",   "F_factor": 0.25 },
+      { "r_factor": 3, "r_label": "3r", "F_label": "F/9",   "F_factor": 0.1111111111111111 }
+    ]
+  },
+  "scene3": {
+    "earth": { "M_kg": 5.972e24, "R_m": 6.371e6, "G": 6.67e-11 },
+    "satellite": { "h_m": 400000.0, "name": "ISS-like low Earth orbit" }
+  },
+  "equations": {
+    "law": "F = G*m1*m2/r^2",
+    "third_law": "F12 = -F21 (equal magnitude, opposite direction)",
+    "mass_scaling": "F proportional to m1*m2",
+    "inverse_square": "F proportional to 1/r^2",
+    "surface_gravity": "g = G*M/R^2",
+    "orbit": "G*M*m/r^2 = m*v^2/r  =>  v = sqrt(G*M/r)",
+    "period": "T = 2*pi*r/v"
+  },
+  "sanity_check": {
+    "expected_g_mps2": 9.81,
+    "g_tolerance_mps2": 0.01,
+    "expected_v_mps": 7670.0,
+    "v_tolerance_mps": 5.0,
+    "expected_period_min": 92.4,
+    "period_tolerance_min": 0.2,
+    "inverse_square": { "2r": 0.25, "3r": 0.1111111111111111 }
+  }
+}

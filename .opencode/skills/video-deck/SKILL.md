@@ -1,63 +1,89 @@
 ---
 name: video-deck
 description: |
-  Trigger when: (1) User wants a PPT / PowerPoint / slides of a video, (2) User says "turn the video into slides" / "video as animation in PowerPoint", (3) User wants to present or teach a lesson in class from slides, (4) User runs generate_deck.py or asks to refresh a project's deck.
+  Trigger when: (1) User wants to present or teach a lesson with slides or click-through animation, (2) User mentions manim-slides, next_slide, present, (3) User wants to step a Manim animation forth and back, (4) User wants a PPT / PowerPoint / slides of a video, (5) User runs generate_deck.py or manim-slides render/present.
 
-  Convert a finished project video into a PowerPoint deck where every slide is one video frame, so the lesson plays forward like an animation inside PowerPoint (Next = forward, Previous = backward; auto-plays at video speed by default).
+  Two tools: Manim Slides (preferred - the scene itself becomes a presentation; right arrow plays each segment forward, left arrow plays it REVERSED) and a PPTX frame deck generated from a rendered mp4.
 
-  Use AFTER the video exists (draft or final). Never modifies video, timeline or scenes.
+  Use AFTER scenes exist (Manim Slides) or AFTER the video exists (pptx). Never modifies timeline/physics/audio/captions.
 ---
 
-# Video deck (video -> PowerPoint animation)
+# Lesson presentation
 
-Turns `projects/<name>/video/<name>_<final|draft>.mp4` into
-`projects/<name>/slides/<name>_slides.pptx`: one full-bleed slide per sampled
-frame. In the slideshow, stepping next/previous scrubs the animation frame by
-frame, and by default the deck also auto-advances at the sampling rate, so it
-plays the whole lesson at video speed.
+## 1. Manim Slides (preferred: click forth & back, real animation)
 
-## How to use
+The scene itself becomes the presentation - no frame chopping, full render
+quality, and going back plays the animation *in reverse* (manim-slides
+pre-renders `_reversed.mp4` segments).
 
-1. Run from the repo root (after a draft or final render exists):
-   `python .opencode/skills/video-deck/scripts/generate_deck.py projects/<name>`
-2. Open `projects/<name>/slides/<name>_slides.pptx`, start the slideshow:
-   - **plays automatically** (10 fps -> real-time), arrow keys still step frames.
-   - `--manual` = no autoplay, only you step with Next/Previous.
-   - `--fps 6` = fewer/slower slides for long videos; `--fps 15` = smoother.
-   - `--intro` = add a title slide (project title from timeline.json) first.
-   - `--video path.mp4` / `--out path.pptx` = override source and destination.
+### Convert a scene (3 edits)
+
+1. After `from manim import *` add: `from manim_slides import Slide`
+2. `class X(Scene):` -> `class X(Slide):`
+3. Split the waits at cue times with `self.next_slide()`:
+
+```python
+wait_live(self, t_release)   # was: wait_live(self, t_watch)
+self.next_slide()            # slide 1 ends here - pressing right plays from the release
+wait_live(self, t_watch)
+self.next_slide()            # slide 2 ends here - pressing right makes the graph appear
+```
+
+`next_slide()` only records a boundary during render - timing and the full
+video output are unchanged, so the normal video flow keeps working.
+
+Working example: `projects/spring-shm/work/scenes/spring_osc.py`
+(4 slides split at cues release / watch / period).
+
+### Render + present (from `projects/<name>/work/`)
+
+```bash
+python -m manim_slides render -ql --media_dir out/media scenes/<file>.py <Scene>
+python -m manim_slides present <Scene>
+```
+
+- Presenter is a Qt window on your desktop:
+  - **Right arrow / click / Space** = next slide (plays forward)
+  - **Left arrow** = previous slide (plays REVERSED - true back-and-forth)
+  - **Esc** = quit
+- Section videos + reversed segments land in `work/slides/` (git-ignored).
+- The normal full mp4 still renders to `work/out/media/...` - captions/assembly
+  flow unaffected.
+- The presenter has **no narration audio** (narration lives in the final mp4);
+  the teacher talks over it.
+
+## 2. PPTX frame deck (fallback, from a rendered mp4)
+
+`generate_deck.py` chops an mp4 into full-bleed slides (10 fps default,
+auto-advance so it plays at video speed). Static frames - looks softer than
+the video; prefer Manim Slides for presenting.
+
+```bash
+python .opencode/skills/video-deck/scripts/generate_deck.py projects/<name>
+#  --manual step only, no autoplay   --intro add title slide   --fps N   --video X --out Y
+python .opencode/skills/video-deck/scripts/verify_deck.py projects/<name>/slides/<name>_slides.pptx
+```
+
+Output: `projects/<name>/slides/<name>_slides.pptx` (frames cached in
+`work/out/deck_frames/`, git-ignored).
 
 ## Output convention (repo-wide)
 
-- Finished decks live in `projects/<name>/slides/<name>_slides.pptx` (alongside
-  `video/` for mp4s). Regenerate after re-rendering the video - it never
-  overwrites anything but its own pptx.
-- Frames are cached in `projects/<name>/work/out/deck_frames/` (git-ignored).
-
-## Scripts
-
-- [scripts/generate_deck.py](scripts/generate_deck.py) - video -> frame slides
-  (ffmpeg one-pass sampling, python-pptx, `p:transition advTm` auto-advance).
-- [scripts/verify_deck.py](scripts/verify_deck.py) - sanity check a deck:
-  `python .opencode/skills/video-deck/scripts/verify_deck.py <path.pptx>`.
-
-## Quick Reference
-
-```bash
-python .opencode/skills/video-deck/scripts/generate_deck.py projects/spring-shm
-python .opencode/skills/video-deck/scripts/generate_deck.py projects/spring-shm --fps 6 --manual
-python .opencode/skills/video-deck/scripts/verify_deck.py projects/spring-shm/slides/spring-shm_slides.pptx
-```
+- Presentation deliverables live in `projects/<name>/slides/`.
+- manim-slides render data lives in `projects/<name>/work/slides/` (cache).
 
 ## Common Pitfalls to Avoid
 
-1. **Deck built before the final render** - regenerate once the `-qh` final lands
-   (the deck picks `_final.mp4` over `_draft.mp4` automatically).
-2. **Too many slides on long videos** - 60+ s videos at 10 fps make 600+ slides;
-   use `--fps 6`.
-3. **Distortion** - frames are stretched to the slide exactly; both are 16:9, so
-   never re-encode the source video to a non-16:9 size.
-4. **Relying on autoplay for inspection** - use `--manual` when the teacher wants
-   to dwell on one moment; autoplay has no pause key (Esc leaves the show).
-5. **This deck is not the captioned deliverable** - captions/audio stay in the
-   mp4; the deck is a silent frame-by-frame companion for class presentation.
+1. **`manim-slides` exe fails with `QtBindingsNotFoundError` on this machine** -
+   always call it as `python -m manim_slides ...` (verified working); the bare
+   exe launcher cannot import PySide6 here.
+2. **next_slide() placement** - put it BEFORE the wait/play that shows the next
+   moment, so pressing right *plays* that moment (e.g. graph FadeIn must come
+   after the break).
+3. **Expecting audio in the presenter** - it is silent; play the mp4
+   separately if narration matters, or talk over it.
+4. **Deck built before the final render** - regenerate the pptx after a `-qh`
+   final lands (it prefers `_final.mp4` automatically).
+5. **Long videos at 10 fps make 600+ slides** - use `--fps 6`.
+6. **This pptx is not the captioned deliverable** - captions/audio stay in the
+   mp4.

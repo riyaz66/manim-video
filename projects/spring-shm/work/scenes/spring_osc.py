@@ -16,6 +16,7 @@ wait and never calls updaters, so the block/readout would stay frozen until the 
 import os, sys, json
 import numpy as np
 from manim import *
+from manim_slides import Slide
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 PROJECT = os.path.dirname(HERE)
@@ -92,7 +93,7 @@ def wait_live(scene, t):
         scene.wait(gap, frozen_frame=False)
 
 
-class SpringOsc(Scene):
+class SpringOsc(Slide):
     def construct(self):
         tl = Timeline(os.path.join(PROJECT, "timeline.json"))
         phys = json.load(open(os.path.join(PROJECT, "physics.json"), encoding="utf-8"))
@@ -197,7 +198,10 @@ class SpringOsc(Scene):
         r2.add_updater(upd_r2)
 
         # ---- block is held until the release cue, then oscillates ---------------
+        wait_live(self, t_release)
+        self.next_slide()   # slide break: setup shown, block still held
         wait_live(self, t_watch)
+        self.next_slide()   # slide break: block oscillating, graph not shown yet
 
         # ---- the graph appears exactly on "Now watch the graph." ----------------
         tau_now = tau(self.renderer.time)
@@ -227,6 +231,7 @@ class SpringOsc(Scene):
 
         # ---- the period bracket appears on the spoken "3.14 seconds." ------------
         wait_live(self, t_period)
+        self.next_slide()   # slide break: graph traced, bracket/period comes next
         bracket = DoubleArrow([axes.c2p(0, 0)[0], BRACKET_Y, 0], [axes.c2p(T, 0)[0], BRACKET_Y, 0],
                               buff=0, color=PERIOD_C, stroke_width=5, max_tip_length_to_length_ratio=0.08)
         per_spec = next(s for s in gspecs if s[4] == "period")
