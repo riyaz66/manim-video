@@ -11,12 +11,13 @@ Skills (in `.opencode/skills/`, each self-contained with scripts):
 - `manim-physics-scenes` - Manim scene rules, cue-sync helper, template
 - `manim-composer` - plan vague idea into scene-by-scene `scenes.md` before coding
 - `manimce-best-practices` - Manim Community Edition rules (`from manim import *`, `manim` CLI)
+- `video-deck` - convert a finished video into a PowerPoint that plays it frame-by-frame as an animation
 
 Global rules:
 - Accuracy over polish. If unsure about physics, ask the teacher.
 - Never rewrite the teacher's words; never print or commit `local_secrets.py`.
 - `live-dictate/` at the repo root is a SEPARATE project (classroom dictate-canvas, Python server + browser frontend, Gemini-only). It has its own `plan.md`; do not mix it with `projects/<name>/` video-studio rules.
-- Projects live in `projects/<name>/` with `work/` (all files) + `video/` (finished mp4s only) — copy `projects/_template/` which already contains both.
+- Projects live in `projects/<name>/` with `work/` (all files) + `video/` (finished mp4s only) — copy `projects/_template/` which already contains both. Finished teaching decks (`.pptx` from `video-deck`) go in `projects/<name>/slides/`.
 - Unique folders only: before creating, `Test-Path projects/<name>`; if it exists, use `<name>-2`, `<name>-3`, … Never overwrite or delete an existing project. Two agents must never share one folder.
 - Captions are YouTube-small everywhere (`assemble.py` auto-scales: ~11px on 480p drafts, ~24px on 1080p finals). QA snapshots must show captions not covering the video.
 - Drafts `-ql` (low quality OK); finals at least `-qh` (1080p). Ask before going higher (e.g. `-qk` 4K).
