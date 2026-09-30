@@ -1,0 +1,40 @@
+1
+00:00:00,593 --> 00:00:02,598
+A 1 kilogram block on a frictionless
+
+2
+00:00:02,598 --> 00:00:05,005
+surface is attached to a spring with
+
+3
+00:00:05,005 --> 00:00:07,138
+spring constant 4 newtons per metre.
+
+4
+00:00:08,052 --> 00:00:09,945
+Pull it back to 10 centimetres and
+
+5
+00:00:09,978 --> 00:00:10,395
+let go.
+
+6
+00:00:11,405 --> 00:00:13,314
+It oscillates in simple harmonic motion.
+
+7
+00:00:14,309 --> 00:00:15,335
+Now watch the graph.
+
+8
+00:00:16,378 --> 00:00:18,496
+One complete cycle takes 2 pi times
+
+9
+00:00:18,560 --> 00:00:20,164
+the square root of m over k,
+
+10
+00:00:20,565 --> 00:00:22,298
+which is 3.14 seconds.
+

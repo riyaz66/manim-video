@@ -1,0 +1,383 @@
+{
+  "meta": {
+    "title": "Two balls fall together - 20 m free-fall",
+    "mode": "ai_voice",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "captions": {
+      "max_words": 7,
+      "max_chars": 42
+    }
+  },
+  "audio": {
+    "file": "audio\\narration.wav"
+  },
+  "words": [
+    {
+      "id": 0,
+      "text": "Two",
+      "start": 0.3,
+      "end": 0.549
+    },
+    {
+      "id": 1,
+      "text": "balls,",
+      "start": 0.549,
+      "end": 1.046
+    },
+    {
+      "id": 2,
+      "text": "one",
+      "start": 1.046,
+      "end": 1.294
+    },
+    {
+      "id": 3,
+      "text": "light",
+      "start": 1.294,
+      "end": 1.709
+    },
+    {
+      "id": 4,
+      "text": "and",
+      "start": 1.709,
+      "end": 1.957
+    },
+    {
+      "id": 5,
+      "text": "one",
+      "start": 1.957,
+      "end": 2.206
+    },
+    {
+      "id": 6,
+      "text": "heavy,",
+      "start": 2.206,
+      "end": 2.703
+    },
+    {
+      "id": 7,
+      "text": "are",
+      "start": 2.703,
+      "end": 2.951
+    },
+    {
+      "id": 8,
+      "text": "dropped",
+      "start": 2.951,
+      "end": 3.531
+    },
+    {
+      "id": 9,
+      "text": "from",
+      "start": 3.531,
+      "end": 3.863
+    },
+    {
+      "id": 10,
+      "text": "twenty",
+      "start": 3.863,
+      "end": 4.36
+    },
+    {
+      "id": 11,
+      "text": "meters.",
+      "start": 4.36,
+      "end": 4.94
+    },
+    {
+      "id": 12,
+      "text": "They",
+      "start": 5.34,
+      "end": 5.716
+    },
+    {
+      "id": 13,
+      "text": "fall",
+      "start": 5.716,
+      "end": 6.093
+    },
+    {
+      "id": 14,
+      "text": "together.",
+      "start": 6.093,
+      "end": 6.94
+    },
+    {
+      "id": 15,
+      "text": "Watch",
+      "start": 7.34,
+      "end": 7.64
+    },
+    {
+      "id": 16,
+      "text": "the",
+      "start": 7.64,
+      "end": 7.82
+    },
+    {
+      "id": 17,
+      "text": "position",
+      "start": 7.82,
+      "end": 8.3
+    },
+    {
+      "id": 18,
+      "text": "time",
+      "start": 8.3,
+      "end": 8.54
+    },
+    {
+      "id": 19,
+      "text": "graph",
+      "start": 8.54,
+      "end": 8.84
+    },
+    {
+      "id": 20,
+      "text": "on",
+      "start": 8.84,
+      "end": 8.96
+    },
+    {
+      "id": 21,
+      "text": "the",
+      "start": 8.96,
+      "end": 9.14
+    },
+    {
+      "id": 22,
+      "text": "right.",
+      "start": 9.14,
+      "end": 9.5
+    },
+    {
+      "id": 23,
+      "text": "The",
+      "start": 9.9,
+      "end": 10.12
+    },
+    {
+      "id": 24,
+      "text": "velocity",
+      "start": 10.12,
+      "end": 10.705
+    },
+    {
+      "id": 25,
+      "text": "arrow",
+      "start": 10.705,
+      "end": 11.071
+    },
+    {
+      "id": 26,
+      "text": "grows",
+      "start": 11.071,
+      "end": 11.437
+    },
+    {
+      "id": 27,
+      "text": "as",
+      "start": 11.437,
+      "end": 11.583
+    },
+    {
+      "id": 28,
+      "text": "gravity",
+      "start": 11.583,
+      "end": 12.096
+    },
+    {
+      "id": 29,
+      "text": "pulls",
+      "start": 12.096,
+      "end": 12.462
+    },
+    {
+      "id": 30,
+      "text": "both",
+      "start": 12.462,
+      "end": 12.754
+    },
+    {
+      "id": 31,
+      "text": "equally.",
+      "start": 12.754,
+      "end": 13.34
+    },
+    {
+      "id": 32,
+      "text": "They",
+      "start": 13.74,
+      "end": 13.998
+    },
+    {
+      "id": 33,
+      "text": "hit",
+      "start": 13.998,
+      "end": 14.192
+    },
+    {
+      "id": 34,
+      "text": "the",
+      "start": 14.192,
+      "end": 14.386
+    },
+    {
+      "id": 35,
+      "text": "ground",
+      "start": 14.386,
+      "end": 14.774
+    },
+    {
+      "id": 36,
+      "text": "together",
+      "start": 14.774,
+      "end": 15.291
+    },
+    {
+      "id": 37,
+      "text": "after",
+      "start": 15.291,
+      "end": 15.614
+    },
+    {
+      "id": 38,
+      "text": "two",
+      "start": 15.614,
+      "end": 15.808
+    },
+    {
+      "id": 39,
+      "text": "point",
+      "start": 15.808,
+      "end": 16.131
+    },
+    {
+      "id": 40,
+      "text": "zero",
+      "start": 16.131,
+      "end": 16.389
+    },
+    {
+      "id": 41,
+      "text": "two",
+      "start": 16.389,
+      "end": 16.583
+    },
+    {
+      "id": 42,
+      "text": "seconds.",
+      "start": 16.583,
+      "end": 17.1
+    },
+    {
+      "id": 43,
+      "text": "Impact",
+      "start": 17.5,
+      "end": 17.872
+    },
+    {
+      "id": 44,
+      "text": "speed",
+      "start": 17.872,
+      "end": 18.181
+    },
+    {
+      "id": 45,
+      "text": "is",
+      "start": 18.181,
+      "end": 18.305
+    },
+    {
+      "id": 46,
+      "text": "nineteen",
+      "start": 18.305,
+      "end": 18.801
+    },
+    {
+      "id": 47,
+      "text": "point",
+      "start": 18.801,
+      "end": 19.11
+    },
+    {
+      "id": 48,
+      "text": "eight",
+      "start": 19.11,
+      "end": 19.42
+    },
+    {
+      "id": 49,
+      "text": "meters",
+      "start": 19.42,
+      "end": 19.792
+    },
+    {
+      "id": 50,
+      "text": "per",
+      "start": 19.792,
+      "end": 19.977
+    },
+    {
+      "id": 51,
+      "text": "second,",
+      "start": 19.977,
+      "end": 20.411
+    },
+    {
+      "id": 52,
+      "text": "the",
+      "start": 20.411,
+      "end": 20.597
+    },
+    {
+      "id": 53,
+      "text": "same",
+      "start": 20.597,
+      "end": 20.845
+    },
+    {
+      "id": 54,
+      "text": "for",
+      "start": 20.845,
+      "end": 21.03
+    },
+    {
+      "id": 55,
+      "text": "both.",
+      "start": 21.03,
+      "end": 21.34
+    }
+  ],
+  "scenes": [
+    {
+      "id": "s1",
+      "engine": "manim",
+      "file": "scenes/free_fall.py",
+      "cues": [
+        {
+          "name": "drop",
+          "at_word": 8,
+          "offset": 0.0
+        },
+        {
+          "name": "graph",
+          "at_word": 15,
+          "offset": 0.0
+        },
+        {
+          "name": "velocity",
+          "at_word": 24,
+          "offset": 0.0
+        },
+        {
+          "name": "impact",
+          "at_word": 33,
+          "offset": 0.0
+        }
+      ]
+    }
+  ]
+}

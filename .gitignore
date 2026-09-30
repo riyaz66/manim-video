@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+
+# Secrets - never commit (AGENTS.md)
+local_secrets.py
+
+# Manim render caches (rebuildable; large)
+work/out/media/
+
+# Deck frame extractions (rebuildable)
+work/out/deck_frames/
+
+# Editor / OS noise
+.vscode/
+Thumbs.db
+*.log

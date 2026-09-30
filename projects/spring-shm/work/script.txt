@@ -1,0 +1,7 @@
+A one kilogram block on a frictionless surface is attached to a spring with spring constant four newtons per metre.
+
+Pull it back to ten centimetres and let go. It oscillates in simple harmonic motion.
+
+Now watch the graph.
+
+One complete cycle takes two pi times the square root of m over k, which is three point one four seconds.

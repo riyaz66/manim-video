@@ -1,0 +1,43 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Caption editor</title>
+<style>
+:root{--bg:#fff;--fg:#1a1a1a;--mut:#666;--hl:#fff3c4;--bd:#ccc}
+@media(prefers-color-scheme:dark){:root{--bg:#161616;--fg:#eee;--mut:#aaa;--hl:#4a3f10;--bd:#444}}
+body{font:16px system-ui,sans-serif;background:var(--bg);color:var(--fg);max-width:820px;margin:0 auto;padding:16px}
+.row{display:flex;gap:8px;align-items:center;margin:6px 0;padding:6px;border-radius:6px}
+.row.on{background:var(--hl)} button.t{font:12px monospace;min-width:64px;cursor:pointer}
+input.txt{flex:1;font:inherit;padding:6px;border:1px solid var(--bd);border-radius:4px;background:var(--bg);color:var(--fg)}
+.bar{position:sticky;top:0;background:var(--bg);padding:8px 0;border-bottom:1px solid var(--bd)}
+small{color:var(--mut)}
+</style></head><body>
+<h2>Caption editor</h2>
+<p><small>1) Load timeline.json and the audio. 2) Click a time to play. 3) Fix the wording. 4) Download corrected.txt, then run <code>captions.py apply-text</code> (or <code>/fix-captions</code> in opencode). Timings are kept automatically.</small></p>
+<div class="bar">
+ <label>timeline.json <input type="file" id="tf" accept=".json"></label>
+ <label>audio <input type="file" id="af" accept="audio/*,video/*"></label>
+ <audio id="au" controls style="width:100%;margin-top:6px"></audio>
+ <button id="dl">Download corrected.txt</button>
+</div>
+<div id="list"></div>
+<script>
+let segs=[], rows=[];
+const au=document.getElementById('au'), list=document.getElementById('list');
+function segment(ws){const out=[];let cur=[];for(const w of ws){cur.push(w);if(cur.length>=8||/[.!?]$/.test(w.text)){out.push(cur);cur=[];}}if(cur.length)out.push(cur);return out;}
+function fmt(t){const m=Math.floor(t/60),s=(t%60).toFixed(1).padStart(4,'0');return m+':'+s;}
+document.getElementById('tf').onchange=async e=>{
+  const tl=JSON.parse(await e.target.files[0].text()); segs=segment(tl.words); list.innerHTML=''; rows=[];
+  segs.forEach((g,i)=>{
+    const r=document.createElement('div'); r.className='row';
+    const b=document.createElement('button'); b.className='t'; b.textContent=fmt(g[0].start);
+    b.onclick=()=>{au.currentTime=g[0].start;au.play();};
+    const inp=document.createElement('input'); inp.className='txt'; inp.value=g.map(w=>w.text).join(' ');
+    r.append(b,inp); list.append(r); rows.push({r,inp,g});
+  });
+};
+document.getElementById('af').onchange=e=>{au.src=URL.createObjectURL(e.target.files[0]);};
+au.ontimeupdate=()=>{const t=au.currentTime;rows.forEach(x=>x.r.classList.toggle('on',t>=x.g[0].start&&t<=x.g[x.g.length-1].end));};
+document.getElementById('dl').onclick=()=>{
+  const txt=rows.map(x=>x.inp.value.trim()).join('\n');
+  const a=document.createElement('a'); a.href=URL.createObjectURL(new Blob([txt],{type:'text/plain'})); a.download='corrected.txt'; a.click();
+};
+</script></body></html>

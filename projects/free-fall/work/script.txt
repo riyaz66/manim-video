@@ -1,0 +1,6 @@
+Two balls, one light and one heavy, are dropped from twenty meters.
+They fall together.
+Watch the position time graph on the right.
+The velocity arrow grows as gravity pulls both equally.
+They hit the ground together after two point zero two seconds.
+Impact speed is nineteen point eight meters per second, the same for both.

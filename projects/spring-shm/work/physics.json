@@ -1,0 +1,25 @@
+{
+  "note": "Every number and equation used in scenes lives here.",
+  "constants": { "k_Npm": 4.0 },
+  "scenario": {
+    "m_kg": 1.0,
+    "amplitude_m": 0.10,
+    "surface": "frictionless",
+    "release_phase": "x = +A at tau = 0"
+  },
+  "equations": {
+    "omega": "omega = sqrt(k/m)",
+    "period": "T = 2*pi*sqrt(m/k) = 2*pi/omega",
+    "frequency": "f = 1/T",
+    "position": "x(t) = A*cos(omega*t)",
+    "velocity": "v(t) = -A*omega*sin(omega*t)"
+  },
+  "sanity_check": {
+    "expected_period_s": 3.14,
+    "period_tolerance_s": 0.02,
+    "expected_omega_radps": 2.0,
+    "omega_tolerance_radps": 0.01,
+    "expected_freq_hz": 0.318,
+    "freq_tolerance_hz": 0.005
+  }
+}

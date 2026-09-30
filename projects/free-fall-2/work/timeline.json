@@ -1,0 +1,43 @@
+{
+  "meta": {
+    "title": "Two balls, 20 m drop: same fall time",
+    "mode": "silent",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "captions": { "max_words": 7, "max_chars": 42 }
+  },
+  "words": [
+    { "id": 0,  "text": "Two",       "start": 0.0,  "end": 0.35 },
+    { "id": 1,  "text": "balls,",    "start": 0.35, "end": 1.0 },
+    { "id": 2,  "text": "released",  "start": 1.5,  "end": 2.1 },
+    { "id": 3,  "text": "together",  "start": 2.1,  "end": 2.5 },
+    { "id": 4,  "text": "velocity",  "start": 2.5,  "end": 3.1 },
+    { "id": 5,  "text": "grows",     "start": 3.1,  "end": 3.7 },
+    { "id": 6,  "text": "the",       "start": 3.7,  "end": 4.0 },
+    { "id": 7,  "text": "graph",     "start": 4.0,  "end": 4.6 },
+    { "id": 8,  "text": "stays",     "start": 4.6,  "end": 5.2 },
+    { "id": 9,  "text": "live",      "start": 5.2,  "end": 5.7 },
+    { "id": 10, "text": "both",      "start": 5.7,  "end": 6.3 },
+    { "id": 11, "text": "still",     "start": 6.3,  "end": 6.9 },
+    { "id": 12, "text": "together",  "start": 6.9,  "end": 7.45 },
+    { "id": 13, "text": "impact",    "start": 7.5,  "end": 8.1 },
+    { "id": 14, "text": "at",        "start": 8.1,  "end": 8.35 },
+    { "id": 15, "text": "2.02",      "start": 8.35, "end": 8.85 },
+    { "id": 16, "text": "s,",        "start": 8.85, "end": 9.1 },
+    { "id": 17, "text": "19.8",      "start": 9.1,  "end": 9.55 },
+    { "id": 18, "text": "m/s",       "start": 9.55, "end": 9.9 }
+  ],
+  "scenes": [
+    {
+      "id": "s1",
+      "engine": "manim",
+      "file": "scenes/free_fall.py",
+      "cues": [
+        { "name": "drop",     "at_word": 2,  "offset": 0.0 },
+        { "name": "velocity", "at_word": 4,  "offset": 0.0 },
+        { "name": "impact",   "at_word": 13, "offset": 0.0 }
+      ]
+    }
+  ]
+}

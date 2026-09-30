@@ -1,0 +1,44 @@
+1
+00:00:00,300 --> 00:00:02,703
+Two balls, one light and one heavy,
+
+2
+00:00:02,703 --> 00:00:04,940
+are dropped from twenty meters.
+
+3
+00:00:05,340 --> 00:00:06,940
+They fall together.
+
+4
+00:00:07,340 --> 00:00:09,140
+Watch the position time graph on the
+
+5
+00:00:09,140 --> 00:00:09,500
+right.
+
+6
+00:00:09,900 --> 00:00:12,462
+The velocity arrow grows as gravity pulls
+
+7
+00:00:12,462 --> 00:00:13,340
+both equally.
+
+8
+00:00:13,740 --> 00:00:15,808
+They hit the ground together after two
+
+9
+00:00:15,808 --> 00:00:17,100
+point zero two seconds.
+
+10
+00:00:17,500 --> 00:00:19,420
+Impact speed is nineteen point eight
+
+11
+00:00:19,420 --> 00:00:21,340
+meters per second, the same for both.
+

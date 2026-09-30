@@ -1,0 +1,135 @@
+[
+  {
+    "start": 0.3,
+    "end": 2.703,
+    "text": "Two balls, one light and one heavy,",
+    "word_ids": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  {
+    "start": 2.703,
+    "end": 4.94,
+    "text": "are dropped from twenty meters.",
+    "word_ids": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ]
+  },
+  {
+    "start": 5.34,
+    "end": 6.94,
+    "text": "They fall together.",
+    "word_ids": [
+      12,
+      13,
+      14
+    ]
+  },
+  {
+    "start": 7.34,
+    "end": 9.14,
+    "text": "Watch the position time graph on the",
+    "word_ids": [
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ]
+  },
+  {
+    "start": 9.14,
+    "end": 9.5,
+    "text": "right.",
+    "word_ids": [
+      22
+    ]
+  },
+  {
+    "start": 9.9,
+    "end": 12.462,
+    "text": "The velocity arrow grows as gravity pulls",
+    "word_ids": [
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29
+    ]
+  },
+  {
+    "start": 12.462,
+    "end": 13.34,
+    "text": "both equally.",
+    "word_ids": [
+      30,
+      31
+    ]
+  },
+  {
+    "start": 13.74,
+    "end": 15.808,
+    "text": "They hit the ground together after two",
+    "word_ids": [
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38
+    ]
+  },
+  {
+    "start": 15.808,
+    "end": 17.1,
+    "text": "point zero two seconds.",
+    "word_ids": [
+      39,
+      40,
+      41,
+      42
+    ]
+  },
+  {
+    "start": 17.5,
+    "end": 19.42,
+    "text": "Impact speed is nineteen point eight",
+    "word_ids": [
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ]
+  },
+  {
+    "start": 19.42,
+    "end": 21.34,
+    "text": "meters per second, the same for both.",
+    "word_ids": [
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55
+    ]
+  }
+]

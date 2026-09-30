@@ -1,0 +1,9 @@
+Newton
+Doppler
+kinematics
+centripetal
+acceleration
+Coulomb
+Faraday
+Ohm
+joule

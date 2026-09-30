@@ -1,0 +1,372 @@
+{
+  "meta": {
+    "title": "Mass-spring oscillator: T = 2*pi*sqrt(m/k) = 3.14 s",
+    "mode": "ai_voice",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "captions": {
+      "max_words": 7,
+      "max_chars": 42
+    }
+  },
+  "words": [
+    {
+      "id": 0,
+      "text": "A",
+      "start": 0.593,
+      "end": 0.641
+    },
+    {
+      "id": 1,
+      "text": "1",
+      "start": 0.737,
+      "end": 0.866
+    },
+    {
+      "id": 2,
+      "text": "kilogram",
+      "start": 0.978,
+      "end": 1.395
+    },
+    {
+      "id": 3,
+      "text": "block",
+      "start": 1.395,
+      "end": 1.812
+    },
+    {
+      "id": 4,
+      "text": "on",
+      "start": 2.021,
+      "end": 2.069
+    },
+    {
+      "id": 5,
+      "text": "a",
+      "start": 2.101,
+      "end": 2.181
+    },
+    {
+      "id": 6,
+      "text": "frictionless",
+      "start": 2.181,
+      "end": 2.598
+    },
+    {
+      "id": 7,
+      "text": "surface",
+      "start": 2.598,
+      "end": 3.031
+    },
+    {
+      "id": 8,
+      "text": "is",
+      "start": 3.384,
+      "end": 3.481
+    },
+    {
+      "id": 9,
+      "text": "attached",
+      "start": 3.481,
+      "end": 3.817
+    },
+    {
+      "id": 10,
+      "text": "to",
+      "start": 3.817,
+      "end": 3.914
+    },
+    {
+      "id": 11,
+      "text": "a",
+      "start": 3.962,
+      "end": 3.978
+    },
+    {
+      "id": 12,
+      "text": "spring",
+      "start": 3.978,
+      "end": 4.315
+    },
+    {
+      "id": 13,
+      "text": "with",
+      "start": 4.844,
+      "end": 5.005
+    },
+    {
+      "id": 14,
+      "text": "spring",
+      "start": 5.005,
+      "end": 5.277
+    },
+    {
+      "id": 15,
+      "text": "constant",
+      "start": 5.39,
+      "end": 5.807
+    },
+    {
+      "id": 16,
+      "text": "4",
+      "start": 5.871,
+      "end": 6.079
+    },
+    {
+      "id": 17,
+      "text": "newtons",
+      "start": 6.192,
+      "end": 6.577
+    },
+    {
+      "id": 18,
+      "text": "per",
+      "start": 6.689,
+      "end": 6.849
+    },
+    {
+      "id": 19,
+      "text": "metre.",
+      "start": 6.849,
+      "end": 7.138
+    },
+    {
+      "id": 20,
+      "text": "Pull",
+      "start": 8.052,
+      "end": 8.277
+    },
+    {
+      "id": 21,
+      "text": "it",
+      "start": 8.277,
+      "end": 8.325
+    },
+    {
+      "id": 22,
+      "text": "back",
+      "start": 8.373,
+      "end": 8.614
+    },
+    {
+      "id": 23,
+      "text": "to",
+      "start": 8.678,
+      "end": 8.742
+    },
+    {
+      "id": 24,
+      "text": "10",
+      "start": 8.774,
+      "end": 9.031
+    },
+    {
+      "id": 25,
+      "text": "centimetres",
+      "start": 9.031,
+      "end": 9.705
+    },
+    {
+      "id": 26,
+      "text": "and",
+      "start": 9.881,
+      "end": 9.945
+    },
+    {
+      "id": 27,
+      "text": "let",
+      "start": 9.978,
+      "end": 10.09
+    },
+    {
+      "id": 28,
+      "text": "go.",
+      "start": 10.138,
+      "end": 10.395
+    },
+    {
+      "id": 29,
+      "text": "It",
+      "start": 11.405,
+      "end": 11.501
+    },
+    {
+      "id": 30,
+      "text": "oscillates",
+      "start": 11.566,
+      "end": 12.063
+    },
+    {
+      "id": 31,
+      "text": "in",
+      "start": 12.063,
+      "end": 12.111
+    },
+    {
+      "id": 32,
+      "text": "simple",
+      "start": 12.207,
+      "end": 12.56
+    },
+    {
+      "id": 33,
+      "text": "harmonic",
+      "start": 12.56,
+      "end": 13.025
+    },
+    {
+      "id": 34,
+      "text": "motion.",
+      "start": 13.025,
+      "end": 13.314
+    },
+    {
+      "id": 35,
+      "text": "Now",
+      "start": 14.309,
+      "end": 14.421
+    },
+    {
+      "id": 36,
+      "text": "watch",
+      "start": 14.614,
+      "end": 14.838
+    },
+    {
+      "id": 37,
+      "text": "the",
+      "start": 14.87,
+      "end": 15.015
+    },
+    {
+      "id": 38,
+      "text": "graph.",
+      "start": 15.015,
+      "end": 15.335
+    },
+    {
+      "id": 39,
+      "text": "One",
+      "start": 16.378,
+      "end": 16.49
+    },
+    {
+      "id": 40,
+      "text": "complete",
+      "start": 16.555,
+      "end": 16.892
+    },
+    {
+      "id": 41,
+      "text": "cycle",
+      "start": 16.892,
+      "end": 17.277
+    },
+    {
+      "id": 42,
+      "text": "takes",
+      "start": 17.277,
+      "end": 17.597
+    },
+    {
+      "id": 43,
+      "text": "2",
+      "start": 17.597,
+      "end": 17.774
+    },
+    {
+      "id": 44,
+      "text": "pi",
+      "start": 17.838,
+      "end": 18.079
+    },
+    {
+      "id": 45,
+      "text": "times",
+      "start": 18.079,
+      "end": 18.496
+    },
+    {
+      "id": 46,
+      "text": "the",
+      "start": 18.56,
+      "end": 18.64
+    },
+    {
+      "id": 47,
+      "text": "square",
+      "start": 18.64,
+      "end": 18.897
+    },
+    {
+      "id": 48,
+      "text": "root",
+      "start": 19.025,
+      "end": 19.137
+    },
+    {
+      "id": 49,
+      "text": "of",
+      "start": 19.137,
+      "end": 19.25
+    },
+    {
+      "id": 50,
+      "text": "m",
+      "start": 19.298,
+      "end": 19.619
+    },
+    {
+      "id": 51,
+      "text": "over",
+      "start": 19.747,
+      "end": 19.988
+    },
+    {
+      "id": 52,
+      "text": "k,",
+      "start": 19.988,
+      "end": 20.164
+    },
+    {
+      "id": 53,
+      "text": "which",
+      "start": 20.565,
+      "end": 20.693
+    },
+    {
+      "id": 54,
+      "text": "is",
+      "start": 20.79,
+      "end": 20.854
+    },
+    {
+      "id": 55,
+      "text": "3.14",
+      "start": 20.966,
+      "end": 21.881
+    },
+    {
+      "id": 56,
+      "text": "seconds.",
+      "start": 21.881,
+      "end": 22.298
+    }
+  ],
+  "scenes": [
+    {
+      "id": "s1",
+      "engine": "manim",
+      "file": "scenes/spring_osc.py",
+      "cues": [
+        { "name": "release", "at_word": 28, "offset": 0.0 },
+        { "name": "watch", "at_word": 35, "offset": 0.0 },
+        { "name": "period", "at_word": 55, "offset": 0.0 }
+      ]
+    }
+  ],
+  "audio": {
+    "file": "audio\\narration.wav"
+  }
+}

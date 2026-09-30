@@ -1,0 +1,34 @@
+{
+  "note": "Every number and equation used in scenes lives here. Silent mode, no narration.",
+  "constants": { "g": 9.81, "rho_air": 1.225 },
+  "scenario": {
+    "v0": 20,
+    "angle_deg": 45,
+    "fan_angles_deg": [15, 30, 45, 60, 75]
+  },
+  "equations": {
+    "trajectory": "y = x*tan(theta) - g*x^2/(2*v0^2*cos(theta)^2)",
+    "range": "R = v0^2 * sin(2*theta) / g",
+    "drag": "a = -g*j_hat - k*|v|*v   (k = 0.03 1/m, quadratic drag)"
+  },
+  "drag": {
+    "k_per_m": 0.03,
+    "dt_s": 0.001,
+    "best_angle_deg": 40.25,
+    "note": "Quadratic drag, Euler steps at fixed dt = 1 ms so physics never depends on frame rate."
+  },
+  "ranges_m": {
+    "no_drag": { "15": 20.38, "30": 35.3, "45": 40.77, "60": 35.31, "75": 20.38 },
+    "drag_k0.03": { "15": 14.74, "30": 21.2, "45": 22.16, "60": 18.53, "75": 10.81 }
+  },
+  "sanity_check": {
+    "expected_range_45_m": 40.8,
+    "expected_range_30_m": 35.3,
+    "expected_range_60_m": 35.3,
+    "tolerance_m": 0.5,
+    "integrator_tolerance_m": 0.1,
+    "drag_best_angle_deg": 40.25,
+    "drag_best_angle_tol_deg": 2.0,
+    "drag_range_45_m": 22.16
+  }
+}

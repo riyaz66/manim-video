@@ -1,0 +1,17 @@
+{
+  "meta": {
+    "title": "Projectile range: derive, chart, break with drag",
+    "mode": "silent",
+    "fps": 15,
+    "width": 854,
+    "height": 480,
+    "captions": { "max_words": 7, "max_chars": 42 }
+  },
+  "audio": {},
+  "words": [],
+  "scenes": [
+    { "id": "s1", "engine": "manim", "file": "scenes/derive_range.py", "cues": [] },
+    { "id": "s2", "engine": "manim", "file": "scenes/fan_curve.py", "cues": [] },
+    { "id": "s3", "engine": "manim", "file": "scenes/drag_sim.py", "cues": [] }
+  ]
+}

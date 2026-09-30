@@ -1,0 +1,3 @@
+file 'C:/Users/HP/Downloads/physics-video-studio (1)/physics-video-studio/projects/projectile-range/work/out/media/videos/derive_range/480p15/DeriveRange.mp4'
+file 'C:/Users/HP/Downloads/physics-video-studio (1)/physics-video-studio/projects/projectile-range/work/out/media/videos/fan_curve/480p15/FanAndCurve.mp4'
+file 'C:/Users/HP/Downloads/physics-video-studio (1)/physics-video-studio/projects/projectile-range/work/out/media/videos/drag_sim/480p15/DragSim.mp4'

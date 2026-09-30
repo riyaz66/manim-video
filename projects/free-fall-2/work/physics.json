@@ -1,0 +1,23 @@
+{
+  "note": "Every number and equation used in scenes lives here.",
+  "constants": { "g": 9.81 },
+  "scenario": {
+    "h_m": 20.0,
+    "v0_mps": 0.0,
+    "mass_light_kg": 1.0,
+    "mass_heavy_kg": 5.0,
+    "air_resistance": false
+  },
+  "equations": {
+    "position": "y(t) = h - 0.5 * g * t^2",
+    "velocity": "v(t) = g * t",
+    "fall_time": "T = sqrt(2*h/g)",
+    "impact_speed": "v = g*T = sqrt(2*g*h)"
+  },
+  "sanity_check": {
+    "expected_fall_time_s": 2.02,
+    "fall_time_tolerance_s": 0.02,
+    "expected_impact_speed_mps": 19.8,
+    "impact_speed_tolerance_mps": 0.15
+  }
+}
